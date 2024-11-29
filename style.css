@@ -1,0 +1,106 @@
+@import url(https://fonts.googleapis.com/css2?family=Dosis:wght@500&family=Lato:wght@100;300;400;700;900&family=Poppinsfamily=Roboto:ital@1&display=swap>
+);
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 'Open Sans' 'San-Serif';
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #e3f2fd;
+}
+.wrapper{
+    height: 70vmin;
+    width: 65vmin;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background: #293447;
+    position: relative;
+}
+.game-details{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 20px 27px;
+    color: #b8c6dc;
+}
+.play-board{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template: repeat(30, 1fr) / repeat(30, 1fr);
+    background: #212837;
+}
+.play-board .food{
+    background: #ff003d;
+}
+.play-board .head{
+    background: #60cbff;
+}
+/* .option{
+    position: absolute;
+    background: #60cbff;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 350px;
+    width: 100%;
+    
+    pointer-events: none;
+    transform: translate(15%, 200%);
+    z-index: 100;
+}
+.option h1{
+    font-size:1rem;
+    text-align: center;
+}
+.option button{
+   height: 30px;
+   width: 100px;
+   background-color: #293447;
+   color: #fff;
+   margin-top: 10px;
+   margin-left: 30%;
+   border-radius: 5px;
+   cursor: pointer;
+}
+.option .p1{
+    opacity: 0;
+} */
+.controls{
+    display: none;
+    justify-content: space-between;
+}
+.controls p{
+    padding: 25px 0;
+    color: #b8c6dc;
+    text-align: center;
+    cursor: pointer;
+    font-size: 1.5rem;
+    width: calc(100% / 4);
+    border-right: 1px solid #171b26;
+}
+
+@media (max-width: 800px){
+    .wrapper{
+        width: 90vmin;
+        height: 115vmin;
+    }
+    .game-details{
+        font-size: 1rem;
+        padding: 15px 27px;
+    }
+    .controls{
+        display: flex;
+    }
+    .controls p{
+        padding: 15px 0;
+        font-size: 1rem;
+    }
+}
